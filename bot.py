@@ -11,7 +11,7 @@ import json
 logging.basicConfig(level=logging.INFO)
 
 # Замените "YOUR_BOT_TOKEN" на токен, который вы получили от BotFather
-API_TOKEN = '7560908384:AAHkFbqZ8XKHMepiEnWQ3AFSShguz-hB0pE'
+API_TOKEN = 'Token'
 
 # Объект бота
 bot = Bot(token=API_TOKEN)

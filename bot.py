@@ -20,7 +20,7 @@ dp = Dispatcher()
 
 # Зададим имя базы данных
 DB_NAME = 'quiz_bot.db'
-DICT_DATA  = 'Python/quiz_data.json'
+DICT_DATA  = 'd:/bots/TG_Bot-main/quiz_data.json'
 with open(DICT_DATA, "r") as j:
     quiz_data = json.loads(j.read())
 # Структура квиза
@@ -89,7 +89,7 @@ async def wrong_answer(callback: types.CallbackQuery):
     if current_question_index < len(quiz_data):
         await get_question(callback.message, callback.from_user.id)
     else:
-        await callback.message.answer("Это был последний вопрос. Квиз завершен!\n Ваш результат: {current_score} правильных ответов")
+        await callback.message.answer(f"Это был последний вопрос. Квиз завершен!\n Ваш результат: {current_score} правильных ответов")
 
 
 # Хэндлер на команду /start

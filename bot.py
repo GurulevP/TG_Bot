@@ -11,7 +11,7 @@ import json
 logging.basicConfig(level=logging.INFO)
 
 # Замените "YOUR_BOT_TOKEN" на токен, который вы получили от BotFather
-API_TOKEN = 'Token'
+API_TOKEN = open("token.txt", r)
 
 # Объект бота
 bot = Bot(token=API_TOKEN)
@@ -20,7 +20,7 @@ dp = Dispatcher()
 
 # Зададим имя базы данных
 DB_NAME = 'quiz_bot.db'
-DICT_DATA  = 'd:/bots/TG_Bot-main/quiz_data.json'
+DICT_DATA  = 'quiz_data.json'
 with open(DICT_DATA, "r") as j:
     quiz_data = json.loads(j.read())
 # Структура квиза
